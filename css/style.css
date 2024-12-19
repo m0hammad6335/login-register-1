@@ -1,0 +1,127 @@
+@font-face {
+    font-family: Roboto;
+    src: url('/font/Roboto-Bold.woff2') format('woff2');
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Roboto;
+}
+
+:root {
+    --first-color: #0a3981;
+    --second-color: #d4ebf8;
+    --three-color: #1f509a;
+    --white-color: #fff;
+    --black-color: #000;
+}
+
+body{
+    background: linear-gradient(90deg, var(--first-color) , var(--second-color));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    height: 500px;
+    width: 400px;
+    background-color: var(--white-color);
+    border-radius: 20px;
+    padding: 40px;
+}
+
+.container form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+
+.container form h1{
+    margin-bottom: 20px;
+    font-size: 40px;
+    color: var(--first-color);
+}
+
+.input-box{
+    width: 100%;
+    height: 55px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    outline: none;
+    border: none;
+    box-shadow: 0 0 50px rgb(0,0,0,0.1);
+    padding: 10px 40px 10px 15px;
+}
+
+.input-box i{
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: grey;
+    transition: 0.7s;
+}
+
+.input-box input:focus ~ i{
+    color: var(--first-color);
+    font-weight: 500;
+}
+
+.container form .btnn a{
+    margin-bottom: 20px;
+    color: var(--first-color);
+    text-decoration: none;
+}
+
+.container form a:hover{
+    color: var(--three-color);
+}
+
+.submit-btn{
+    width: 100%;
+    height: 55px;
+    border: none;
+    border-radius: 15px;
+    background-color: var(--first-color);
+    color: var(--white-color);
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.7s;
+    margin-bottom: 20px;
+}
+
+.submit-btn:hover{
+    background-color: var(--three-color);
+}
+
+.btnn{
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btnn a:nth-child(2){
+    color: red !important;
+} 
+
+.btnn .register-donthave{
+    justify-content: center;
+    display: flex;
+    width: 100%;
+}
